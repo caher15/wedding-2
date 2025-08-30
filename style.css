@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #e8ece6;
+    color: #333;
+}
+
+/* ======== SECCIÓN PRINCIPAL (Foto + Logo) ======== */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/img/fondo.jpg'); /* Foto principal */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 3s ease;
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    10% {
+        opacity: 1;
+        filter: brightness(2) blur(10px);
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.logo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.logo img {
+    width: 160px;
+    max-width: 80%;
+}
+/* countdown */
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 71%;
+    left: 10%;
+    bottom: 15%;
+    width: 80%;
+}
+.time-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    text-transform: uppercase;
+    color: white;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.number{
+    color: white;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.time-container:nth-of-type(3) .number::after{
+    display: none;
+}
+
+.number::after{
+    color: white;
+    font-size: inherit;
+    position: absolute;
+    top: 50%;
+    right: -6.5rem;
+    line-height: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+}
+.names {
+    position: absolute;
+    bottom: 24%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.names p{
+    font-weight: 300;
+}
+/* ======== SECCIÓN INTRO ======== */
+.intro {
+    text-align: center;
+    padding: 40px  0px 20px;
+    background-color: #e8ece6;
+}
+.intro p{
+    color: #384333;
+}
+.intro pre{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    white-space: pre-wrap;
+    max-width: 400px; 
+    line-height: 1.5; 
+}
+.parents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 15px;
+    font-family: "Libertinus Serif", serif;
+}
+.parents > div:first-child {
+    position: relative;
+    padding-right: 45px;
+}
+
+.parents > div:first-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 44px;       
+    width: 2px;         
+    background-color: #333;
+}
+
+/* ======== SECCIÓN FECHA ======== */
+.date-section {
+    background-image: url('/assets/img/circulo.png');
+    position: relative;
+    text-align: center;
+    background-color: #f4f1f7;
+    padding: 30px 20px;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+}
+.flower-icon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 176px;
+    height: 35px;
+    background-image: url(/assets/icons/flor.png);
+    background-size: cover;
+}
+.date-title {
+    margin-top: 50px;
+    color: #888;
+    font-weight: bold;
+}
+.date {
+    font-size: 3.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 600;
+    color: #c5aff8;
+    margin: 15px 0;
+}
+.events {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.event {
+    text-align: center;
+    width: 45%;
+}
+.event img {
+    width: 75px;
+    margin-bottom: 8px;
+}
+.event-body{
+    margin-bottom: 10px;
+}
+.btn-map {
+    background-color: #b9c8b1;
+    color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+.event-subtitle{
+    font-size: 1.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 600;
+    color: #c5aff8;
+}
+.date-footer p{
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 400;
+    color: #b9c8b1;
+
+}
+
+/* ======== SECCIÓN REGALOS ======== */
+.gifts {
+    background-color: #e4e1f4;
+    text-align: center;
+    padding: 30px 20px;
+}
+.gifts h3 {
+    font-size: 1.3rem;
+    font-family: "Libertinus Serif", serif;
+    color: #c3aef8;
+}
+.gifts p{
+    color: #a295ce;
+}
+.gift-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.gift-logos img {
+    height: 25px;
+}
+.btn-gift {
+    background-color: #a18bbf;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ======== SECCIÓN CONFIRMAR ======== */
+.confirm-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 307px;
+    height: 78vh;
+    background-image: url(assets/img/foto-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 30px 0px;
+}
+.confirm-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.check{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(assets/icons/icon-check.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+.confirm-img-container h3{
+    padding-top: 0px;
+    font-family: "Libertinus Serif", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    /* line-height: 2.6rem; */
+    color: #b6c6af;
+}
+.confirm-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+.btn-confirm{
+    background-color: #b9c8b1;
+    color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/* ======== GALERÍA FINAL ======== */
+.gallery img {
+    width: 100%;
+    display: block;
+}
+@media screen and (min-width: 375px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 57px;
+}
+}  
+@media screen and (min-width: 412px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 70px;
+    }   
+    .date-title {
+    margin-top: 75px;
+    }
+
+
+}  
+@media screen and (min-width: 425px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 67px;
+}
+}
+@media screen and (min-width: 768px) {
+    .parents > div:first-child::after {
+    display: none;
+}
+    
+}
