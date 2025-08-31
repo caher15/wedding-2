@@ -47,13 +47,43 @@ body {
     width: 160px;
     max-width: 80%;
 }
+.number::after{
+    color: white;
+    font-size: inherit;
+    position: absolute;
+    top: 50%;
+    right: -6.5rem;
+    line-height: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+}
+.names {
+    position: absolute;
+    bottom: 13%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.names p{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.names span {
+  display: block;     
+  width: 60px;
+  border-bottom: 1px solid white; 
+  margin: 20px auto 0 auto;       
+}
 /* countdown */
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 71%;
+    top: 89%;
     left: 10%;
     bottom: 15%;
     width: 80%;
@@ -85,29 +115,6 @@ body {
     display: none;
 }
 
-.number::after{
-    color: white;
-    font-size: inherit;
-    position: absolute;
-    top: 50%;
-    right: -6.5rem;
-    line-height: 80px;
-    height: 80px;
-    transform: translate(-50%, -50%);
-}
-.names {
-    position: absolute;
-    bottom: 24%;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-.names p{
-    font-weight: 300;
-}
 /* ======== SECCIÓN INTRO ======== */
 .intro {
     text-align: center;
